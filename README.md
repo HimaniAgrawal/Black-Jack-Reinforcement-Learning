@@ -1,1 +1,4 @@
-# Black-Jack-Reinforcement-Learning
+# Black Jack Reinforcement Learning
+Blackjack is a popular card game where the goal is to get as close to sum of 21 without going over. The Reinforcement Learning (RL) agent has a set of two cards in the beginning, the dealer also gets 2 cards one face up and another face down. The RL agent can perform two actions: hit or stick. If the RL agent hits and the sum of the cards is above 21, the agent busts and looses the game. It is a finite episodic tasks and rewards obtained at the end are: +1, 0 and -1.
+
+I am using Monte Carlo methods to obtain the optimal policy that maximizes the total expected return for the agent. First obtain the Action value function (Q), then the corresponding state value function (V) is generated from running 500,000 episodes. I then used the alpha-MC Control Q update method to iterate and obtain the optimal action value function, state value function and optimal policy. The biggest advantage of using the alpha-MC Control as opposed to a greedy algorithm is the exploration addition, that leads more states being explored and results in maximum expected rewards.
